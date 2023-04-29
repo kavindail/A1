@@ -341,7 +341,7 @@ app.get('/membersPage', requireAuth, (req, res) => {
 
 function requireAuth(req, res, next) {
     if (!req.session.email) {
-        res.redirect('/login');
+        res.redirect('/');
     } else {
         next();
     }
