@@ -42,7 +42,10 @@ app.use(session({
     secret: node_session_secret,
     store: mongoStore,
     saveUninitialized: false,
-    resave: true
+    resave: true,
+    cookie: {
+        maxAge: expireTime
+    }
 }
 ));
 
